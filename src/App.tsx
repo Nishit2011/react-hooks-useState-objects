@@ -7,10 +7,11 @@ export default function App() {
     lastName: ""
   });
 
-  const handleField = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleField = (event: React.ChangeEvent<HTMLInputElement>): boolean => {
     event.preventDefault();
     const { name, value } = event.target;
     setFieldVal({ ...fieldVal, [name]: value });
+    return true;
   };
   return (
     <div className="App">
